@@ -4,8 +4,7 @@ class Main {
   static int userChoice;
 
   public static void main(String[] args) {
-    Scanner sc=new Scanner(System.in);
-    
+    Scanner sc = new Scanner(System.in);
 
     System.out.println("A1A Carwash");
     // Using Escape sequence character to get a good formatting of output:)
@@ -14,17 +13,23 @@ class Main {
     System.out.println("3. Sports Car\t\t $40,000\n4. Hatchback\t\t $18,000");
     System.out.println("5. Convertible\t\t $35,000\n6. Luxury Car\t\t $50,000");
     System.out.println("7. Quit");
-  System.out.println("Enter Below( 1 to 7): ");
-  try{
-  userChoice=sc.nextInt();
-  InputValidator(userChoice);
+    System.out.println("Enter Below( 1 to 7): ");
+    try {
+      userChoice = sc.nextInt();
+      InputValidator(userChoice);
+    } catch (exception e) {
+      System.out.println("Unexpected Input Received.");
+    } catch (IllegalArgumentException e) {
+      System.out.println("HINT: Enter a Number between One to 7");
+      System.out.println();
+    }
   }
-  catch(exception e){
-    System.out.println("Enter a String Please");
-  }
-  }
-  static void InputValidator(int a){
-    
+
+  static void InputValidator(int a) {
+    if (a < 0 && a > 7) {
+      throw new IllegalArgumentExcenption("Error: Invalid Input.");
+
+    }
   }
 
 }
