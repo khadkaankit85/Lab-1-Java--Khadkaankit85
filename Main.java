@@ -5,7 +5,12 @@ class Main {
 
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
-
+    int qSedan=0;
+    int qSUV=0;
+    int qSportsCar=0;
+    int qHatchback=0;
+    int qConvertible=0;
+    int qLuxuryCar=0;
     while (true) {
       System.out.println("A1A Carwash");
       System.out.println("Type Of Car\t\t\t Price");
@@ -32,9 +37,11 @@ class Main {
         break; // Exit the loop if the user chooses to quit
       }
       else {
-        ;
+        
         if (userChoice==1){
-        System.out.println();
+          do{
+        System.out.println("Enter the Quantity.");
+        int qSedan=sc.nextInt()
       }
     }
 
